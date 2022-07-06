@@ -18,6 +18,7 @@ app.use(cors());
 // const CONNECTION_URL = 'mongodb+srv://js_mastery:123123123@practice.jto9p.mongodb.net/test';
 //mongodb+srv://javascriptmastery:1234@cluster0.7awa0.mongodb.net/?retryWrites=true&w=majority
 // const CONNECTION_URL = 'mongodb://localhost:27017/Project';
+// mongodb+srv://javascriptmastery:1234@cluster0.7awa0.mongodb.net/?retryWrites=true&w=majority
 const CONNECTION_URL = 'mongodb+srv://javascriptmastery:1234@cluster0.7awa0.mongodb.net/?retryWrites=true&w=majority';
 const PORT = process.env.PORT|| 5000;
 
