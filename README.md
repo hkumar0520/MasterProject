@@ -10,5 +10,10 @@ https://www.robinwieruch.de/redux-vs-usereducer/
 // async function and await
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
 
+// use of cors
+https://www.section.io/engineering-education/how-to-use-cors-in-nodejs-with-express/#:~:text=CORS%20stands%20for%20Cross%2DOrigin,origins%20can%20access%20the%20API.
+
+
+
 
 
