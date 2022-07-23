@@ -1,0 +1,10 @@
+
+// initialize empty json
+npm init -y
+
+//
+body-parser for post request, cors for cross-origin request, express for creating routing for application 
+mongoose for making models
+npm install body-parser cors express mongoose nodemon 
+
+
