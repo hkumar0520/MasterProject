@@ -15,3 +15,9 @@ npm config set legacy-peer-deps true
 npm install @material-ui/core
 
 npm install react-redux
+
+
+npm install @material-ui/icons
+
+SVG Backgrounds for background css
+
