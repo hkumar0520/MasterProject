@@ -9,7 +9,7 @@ npm install body-parser cors express mongoose nodemon
 
 
 mongodbfunction used
-find(), save(), findByIdAndUpdate(), findByIdAndRemove
+find(), save(), findByIdAndUpdate(), findByIdAndRemove(), findById()
 
 
 
