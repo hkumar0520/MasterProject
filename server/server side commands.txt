@@ -8,3 +8,11 @@ mongoose for making models
 npm install body-parser cors express mongoose nodemon 
 
 
+mongodbfunction used
+find(), save(), findByIdAndUpdate()
+
+
+
+
+
+
