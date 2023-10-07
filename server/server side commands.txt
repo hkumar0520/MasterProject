@@ -7,4 +7,14 @@ body-parser for post request, cors for cross-origin request, express for creatin
 mongoose for making models
 npm install body-parser cors express mongoose nodemon 
 
+npm i dotenv
+
+
+mongodbfunction used
+find(), save(), findByIdAndUpdate(), findByIdAndRemove(), findById()
+
+
+
+
+
 
