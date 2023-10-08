@@ -30,7 +30,8 @@ useSelector
 useStyles
 
 
-
+npm install jwt-decode react-google-login
+npm install react-router-dom
 
 
 

@@ -14,7 +14,7 @@ mongodbfunction used
 find(), save(), findByIdAndUpdate(), findByIdAndRemove(), findById()
 
 
-
+npm install bcryptjs jsonwebtoken
 
 
 
