@@ -3,6 +3,9 @@ import { Avatar, Button, Paper, Grid, Typography, Container } from '@material-ui
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import useStyles from './styles';
 import Input from './Input';
+// import { GoogleLogin } from 'react-google-login';
+import { GoogleLogin, GoogleOAuthProvider } from '@react-oauth/google';
+import Icon from './icon';
 
 const Auth = () => {
 
@@ -19,6 +22,18 @@ const Auth = () => {
 
     const handleChange = () => {
 
+    }
+
+    const googleSuccess = async (res) => {
+        console.log('hi')
+        console.log(res);
+        console.log(res.profielobj)
+    }
+
+    const googleError = (error) => {
+        console.log('hi')
+        console.log(error);
+        console.log('Google Sign In was unsuccessful. Try again later');
     }
 
     const switchMode = () => {
@@ -51,6 +66,19 @@ const Auth = () => {
                     <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>
                         { isSignup ? 'Sign Up' : 'Sign In' }
                     </Button>
+                    <GoogleOAuthProvider 
+                    clientId="226288908827-67tb8pgf1k8vv8klk948astjcgssbp8t.apps.googleusercontent.com">
+                    <GoogleLogin
+                        render={(renderProps) => (
+                            <Button className={classes.googleButton} color="primary" fullWidth onClick={renderProps.onClick} disabled={renderProps.disabled} startIcon={<Icon />} variant="contained">
+                                Google Sign In
+                            </Button>
+                        )}
+                        onSuccess={googleSuccess}
+                        onFailure={googleError}
+                        cookiePolicy="single_host_origin"
+                    />
+                    </GoogleOAuthProvider>
                     <Grid container justifyContent="flex-end">
                         <Grid item>
                           <Button onClick={switchMode}>
