@@ -1,5 +1,5 @@
 import React, { useState, useEffect }  from 'react';
-import {Link, useHistory, useLocation} from 'react-router-dom';
+import {Link, useNavigate, useLocation} from 'react-router-dom';
 import { AppBar, Typography, Toolbar, Avatar, Button } from '@material-ui/core';
 
 import useStyles from './styles';
@@ -11,19 +11,22 @@ const Navbar = () => {
     const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
     const classes = useStyles();
     const dispatch = useDispatch();
-    const history = useHistory();
+    const navigate = useNavigate();
     const location = useLocation();
 
     console.log('Navbar');
 
     const logout = () => {
+
+      console.log('logout');
+      console.log(user);
       dispatch({ type: 'LOGOUT'});
-      history.push('/');
+      navigate('/');
       setUser(null);
     };
 
     useEffect(() => {
-      const token = user?.token;
+      //const token = user?.token;
 
       setUser(JSON.parse(localStorage.getItem('profile')));
     }, [location]);
@@ -39,7 +42,7 @@ const Navbar = () => {
             <Toolbar className={classes.toolbar}>
             {user ? (
               <div className={classes.profile}>
-                <Avatar className={classes.purple} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
+                <Avatar className={classes.purple} alt={user?.result.name} src={user?.result.picture}>{user?.result.name.charAt()}</Avatar>
                 <Typography className={classes.userName} variant="h6">{user?.result.name}</Typography>
                 <Button variant="contained" className={classes.logout} color="secondary" onClick={logout} >Logout</Button>
               </div>
