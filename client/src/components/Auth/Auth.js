@@ -3,15 +3,23 @@ import { Avatar, Button, Paper, Grid, Typography, Container } from '@material-ui
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import useStyles from './styles';
 import Input from './Input';
+import { useHistory } from 'react-router-dom';
+
 // import { GoogleLogin } from 'react-google-login';
 import { GoogleLogin, GoogleOAuthProvider } from '@react-oauth/google';
+import { useDispatch } from 'react-redux';
+import { AUTH } from '../../constants/actionTypes';
 import Icon from './icon';
+
+import jwt_decode from 'jwt-decode';
 
 const Auth = () => {
 
     const [showPassword, setShowPassword] = useState(false);
     const [isSignup, setisSignup] = useState(false);
     const classes = useStyles();
+    const dispatch = useDispatch();
+    const history = useHistory();
 
 
     const handleShowPassword = () => setShowPassword((prevShowPassword) => !prevShowPassword )
@@ -26,8 +34,20 @@ const Auth = () => {
 
     const googleSuccess = async (res) => {
         console.log('hi')
+        const responsee = jwt_decode(res.credential);
         console.log(res);
-        console.log(res.profielobj)
+        console.log(responsee);
+
+        const result = res?.profileObj;
+        const token = res?.tokenId;
+    
+        try {
+          dispatch({ type: AUTH, data: { result, token } });
+    
+          history.push('/');
+        } catch (error) {
+          console.log(error);
+        }
     }
 
     const googleError = (error) => {
@@ -67,7 +87,7 @@ const Auth = () => {
                         { isSignup ? 'Sign Up' : 'Sign In' }
                     </Button>
                     <GoogleOAuthProvider 
-                    clientId="226288908827-67tb8pgf1k8vv8klk948astjcgssbp8t.apps.googleusercontent.com">
+                    clientId="226288908827-nfqqe4h6bv90khan1b64sogbgsqopnkq.apps.googleusercontent.com">
                     <GoogleLogin
                         render={(renderProps) => (
                             <Button className={classes.googleButton} color="primary" fullWidth onClick={renderProps.onClick} disabled={renderProps.disabled} startIcon={<Icon />} variant="contained">

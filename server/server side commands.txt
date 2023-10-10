@@ -16,5 +16,8 @@ find(), save(), findByIdAndUpdate(), findByIdAndRemove(), findById()
 
 npm install bcryptjs jsonwebtoken
 
+npm install http-proxy-middleware
 
+
+npm uninstall http-proxy-middleware
 

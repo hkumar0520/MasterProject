@@ -38,15 +38,6 @@ npm install @react-oauth/google
 To get client ID,
 
 
-https://stackoverflow.com/questions/68438293/the-given-origin-is-not-allowed-for-the-given-client-id-gsi
-
-https://stackoverflow.com/questions/74295237/google-oauth-components-must-be-used-within-googleoauthprovider
-
-https://www.c-sharpcorner.com/article/google-authentication-for-react-application/
-
-
-
-
 
 
 

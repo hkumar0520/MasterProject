@@ -1,0 +1,27 @@
+
+https://stackoverflow.com/questions/68438293/the-given-origin-is-not-allowed-for-the-given-client-id-gsi
+
+https://stackoverflow.com/questions/74295237/google-oauth-components-must-be-used-within-googleoauthprovider
+
+https://www.c-sharpcorner.com/article/google-authentication-for-react-application/
+
+
+details
+: 
+"You have created a new client application that uses libraries for user authentication or authorization 
+that are deprecated. New clients must use the new libraries instead. See the 
+[Migration Guide](https://developers.google.com/identity/gsi/web/guides/gis-migration) for more information."
+error
+: 
+"idpiframe_initialization_failed"
+
+Discussion on useGoodleLogin, Googlelogin
+
+https://livefiredev.com/in-depth-guide-sign-in-with-google-in-a-react-js-application/
+
+
+https://medium.com/@OloriAsabi/google-oauth2-using-the-new-google-identity-services-sdk-for-react-using-jwt-decode-d687d2e05aa2
+
+
+
+
