@@ -9,13 +9,16 @@ import { useNavigate } from 'react-router-dom';
 import { GoogleLogin, GoogleOAuthProvider } from '@react-oauth/google';
 import { useDispatch } from 'react-redux';
 import { AUTH } from '../../constants/actionTypes';
+import { signin, signup } from '../../actions/auth';
 import Icon from './icon';
-
 import jwt_decode from 'jwt-decode';
+
+const initialState = { firstName: '', lastName: '', email: '', password: '', confirmPassword: '' };
 
 const Auth = () => {
 
     const [showPassword, setShowPassword] = useState(false);
+    const [form, setform] = useState(initialState);
     const [isSignup, setisSignup] = useState(false);
     const classes = useStyles();
     const dispatch = useDispatch();
@@ -24,12 +27,21 @@ const Auth = () => {
 
     const handleShowPassword = () => setShowPassword((prevShowPassword) => !prevShowPassword )
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
-    }
+        console.log(form);
 
-    const handleChange = () => {
+        if (isSignup) {
+            dispatch(signup(form, navigate));
+          } else {
+            dispatch(signin(form, navigate));
+          }
 
+    };
+
+    const handleChange = (e) => {
+        setform({...form, [e.target.name]: e.target.value})
     }
 
     const googleSuccess = async (res) => {
@@ -38,7 +50,8 @@ const Auth = () => {
         console.log(res);
         console.log(result);
 
-        const token = res?.tokenId;
+        // sub is different for every google auth
+        const token = result?.sub;
     
         try {
           dispatch({ type: AUTH, data: { result, token } });

@@ -23,5 +23,10 @@ https://livefiredev.com/in-depth-guide-sign-in-with-google-in-a-react-js-applica
 https://medium.com/@OloriAsabi/google-oauth2-using-the-new-google-identity-services-sdk-for-react-using-jwt-decode-d687d2e05aa2
 
 
+google auth
+https://www.youtube.com/watch?v=brvpWTGEyOA
+javascript mastery titk tok clone 1 hour:55 minute
+https://www.youtube.com/watch?v=CcBHZ0t2Qwc
 
-
+github discussion on googlelogin & googleuselogin
+https://github.com/MomenSherif/react-oauth/issues/12
