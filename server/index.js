@@ -5,6 +5,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 
 import postRoutes from './routes/posts.js'
+import userRoutes from "./routes/users.js";
 
 const app = express();
 dotenv.config();
@@ -16,6 +17,7 @@ app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors());
 
 app.use('/posts',postRoutes);
+app.use('/user', userRoutes);
 
 // const CONNECTION_URL = 'mongodb+srv://js_mastery:123123123@practice.jto9p.mongodb.net/test';
 //mongodb+srv://javascriptmastery:1234@cluster0.7awa0.mongodb.net/?retryWrites=true&w=majority
