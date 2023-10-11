@@ -11,7 +11,7 @@ npm i dotenv
 
 
 mongodbfunction used
-find(), save(), findByIdAndUpdate(), findByIdAndRemove(), findById()
+find(), save(), findByIdAndUpdate(), findByIdAndRemove(), findById(), findOne(), create(), 
 
 
 npm install bcryptjs jsonwebtoken

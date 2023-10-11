@@ -51,7 +51,7 @@ const Auth = () => {
         console.log(result);
 
         // sub is different for every google auth
-        const token = result?.sub;
+        const token = res?.credential;
     
         try {
           dispatch({ type: AUTH, data: { result, token } });
