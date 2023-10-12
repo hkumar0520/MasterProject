@@ -1,4 +1,4 @@
-import pkg from "jsonwebtoken";
+import jwt from "jsonwebtoken";
 
 const secret = 'test';
 
@@ -8,7 +8,7 @@ const secret = 'test';
 const auth = async (req, res, next) => {
     try {
       // an error is coming , that's why import jwt like this
-      const { jwt } = pkg;
+      console.log(req.headers);
       const token = req.headers.authorization.split(" ")[1];
       const isCustomAuth = token.length < 500;
   
