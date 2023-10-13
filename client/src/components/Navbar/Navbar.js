@@ -4,6 +4,7 @@ import { AppBar, Typography, Toolbar, Avatar, Button } from '@material-ui/core';
 
 import useStyles from './styles';
 import { useDispatch } from 'react-redux';
+import jwt_decode from 'jwt-decode';
 
 import memories from '../../images/memories.png';
 
@@ -26,7 +27,18 @@ const Navbar = () => {
     };
 
     useEffect(() => {
-      //const token = user?.token;
+      const token = user?.token;
+
+      if (token) 
+      {
+        const decodedToken = jwt_decode(token);
+        console.log('inside navbar useeffect')
+        console.log(decodedToken);
+
+        // value in milliseconds
+        if (decodedToken.exp * 1000 < new Date().getTime()) 
+          logout();
+      }
 
       setUser(JSON.parse(localStorage.getItem('profile')));
     }, [location]);
