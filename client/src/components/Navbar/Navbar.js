@@ -22,7 +22,7 @@ const Navbar = () => {
       console.log('logout');
       console.log(user);
       dispatch({ type: 'LOGOUT'});
-      navigate('/');
+      navigate('/auth');
       setUser(null);
     };
 
