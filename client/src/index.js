@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDom from "react-dom/client";
+// provider helps us to track the global state and access it anywhere inside the app , child component
 import {Provider} from 'react-redux';
 import { createStore, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk';
