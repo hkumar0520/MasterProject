@@ -15,8 +15,10 @@ export const getPosts = async (req,res) =>{
 }
 
 export const createPost = async (req, res) =>{
+    // in req.body get data from frontend, in the frontend order
     const post = req.body;
 
+    // here the data saved in newPost in the order of schema in models
     const newPost = new PostMessage(post);
         // https://www.restapitutorial.com/httpstatuscodes.html
     try{

@@ -5,6 +5,7 @@ import Post from './Post/Post.js';
 import useStyles from './styles';
 
 const Posts = () => {
+    // using state from global store using the provider tag in index.js
     const posts = useSelector((state) => state.posts);
     const classes = useStyles();
 
