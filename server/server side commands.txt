@@ -8,4 +8,14 @@ for application mongoose for making models, nodemon for automatically load the
 server side(we don't need to do it manuallY)
 npm install body-parser cors express mongoose nodemon 
 
+npm i dotenv
+
+
+mongodbfunction used
+find(), save(), findByIdAndUpdate(), findByIdAndRemove(), findById()
+
+
+
+
+
 
