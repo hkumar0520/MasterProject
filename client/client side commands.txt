@@ -7,7 +7,7 @@ npm create-react-app something
 
 
 // axios for api requests, moment library for time and date,
-// react-file-base64 for converting images, redux-thunk asschnrounuous actions using redux
+// react-file-base64 for converting images, redux-thunk asynchnrounuous actions using redux
 npm install axios moment react-file-base64 redux redux-thunk
 
 // library like bootstrap

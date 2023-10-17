@@ -2,15 +2,21 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
+
+
+// by adding type:'module' in package.json, no need to add express = require('express') syntax
+
 import dotenv from 'dotenv';
+
 
 import postRoutes from './routes/posts.js'
 
+// create a instance of express which can be used to call function 
 const app = express();
 dotenv.config();
 console.log(process.env.CONNECTION_URL);
 
-
+// send requests with 30mb size
 app.use(bodyParser.json({ limit: '30mb', extended: true }))
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors());

@@ -4,7 +4,12 @@ import { Grid, CircularProgress } from '@material-ui/core';
 import Post from './Post/Post.js';
 import useStyles from './styles';
 
+
+const Posts = () => {
+    // using state from global store using the provider tag in index.js
+
 const Posts = ({setCurrentId}) => {
+
     const posts = useSelector((state) => state.posts);
     const classes = useStyles();
 

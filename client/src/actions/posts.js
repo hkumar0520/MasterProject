@@ -1,7 +1,8 @@
 import * as api from '../api';
 import {CREATE, FETCH_ALL, UPDATE, DELETE, LIKE} from '../constants/actionTypes'
 
-// Action Creators - function that returns an action
+// Action Creators - function that returns an action(object)
+// redux thunk allows us to pass an additional dispatch function for asynchronous actions allowed
 export const getPosts = () => async (dispatch) => {
 
     // const action = {type: 'FETCH_ALL', payload: []}

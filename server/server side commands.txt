@@ -3,8 +3,9 @@
 npm init -y
 
 //
-body-parser for post request, cors for cross-origin request, express for creating routing for application 
-mongoose for making models
+body-parser for enabling post request, cors for cross-origin request, express framework for creating routing 
+for application mongoose for making models, nodemon for automatically load the 
+server side(we don't need to do it manuallY)
 npm install body-parser cors express mongoose nodemon 
 
 npm i dotenv
